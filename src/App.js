@@ -1,29 +1,30 @@
 import './App.css';
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
 } from "react-router-dom";
-import about from "./pages/about.jsx";
-import Contact from './pages/contact';
-import Navbar from "./pages/navbar.js";
+import About from "./pages/about.jsx";
+import Contact from './pages/contact.jsx';
+import Navbar from "./pages/navbar.jsx";
+import Welcome from "./pages/welcome.jsx";
 
 function App() {
   return (
-    <>
-    <div class='App-header'>
-        <Navbar />
-    </div>
-    {/* This is the alias of BrowserRouter i.e. Router */}
-    <Router>
-        <Routes>
-          <Route path="/about" component={about} />
-          <Route path="/contact" component={Contact} />
-        </Routes>
+      <Router>
+        <React.Fragment>
+      <Navbar />
+      <Route exact path ="/" render={()=>(
+        <Welcome name="CODEDEC" />
+      )} />
+      <Routes>
+        <Route exact path="/aboutus" component={About} />
+        <Route exact path="/contactus" component={Contact} />
+      </Routes>
+      </React.Fragment>
       </Router>
-    
-    </>
-  );
+    );
 }
 
 export default App;
