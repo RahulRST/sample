@@ -1,22 +1,27 @@
-topnav {
-    background-color: #2155CD;
-    overflow: hidden;
-  }
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  align-items: center;
+}
 
-  .topnav a {
-    float: left;
-    color: #E8F9FD;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  .topnav a:hover {
-    background-color: #0AA1DD;
-    color: black;
-  }
+nav li {
+  display: inline-block;
+  margin-right: 0.5rem;
+  background: #282c34;
+  background-color: black;
+  border: 1px;
+  border-radius: 30px;
+}
 
-  .topnav a.active {
-    background-color: #79DAE8;
-    color: white;
-  }
+nav li a {
+  display: block;
+  padding: 1.5rem;
+  color: blue;
+  text-decoration: none;
+}
+nav li:hover {
+  background:blueviolet;
+}
+nav li:active {
+  background:#61dafb;
+}
