@@ -1,16 +1,18 @@
 ul {
   list-style-type: none;
   overflow: hidden;
-  align-items: center;
+  text-align: center;
 }
 
 nav li {
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 5px;
   background: #282c34;
   background-color: black;
+  width: 150px;
   border: 1px;
   border-radius: 30px;
+  height: 90px;
 }
 
 nav li a {
